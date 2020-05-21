@@ -13,7 +13,6 @@ namespace Blog.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-            Database.EnsureCreated();
         }
 
         DbSet<ApplicationUser> ApplicationUsers { get; set; }

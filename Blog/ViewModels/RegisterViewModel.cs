@@ -15,6 +15,6 @@ namespace Blog.ViewModels
     public string Password { get; set; }
     
     [Required, DataType(DataType.Password), Compare(nameof(Password))] 
-    public string RememberMe { get; set; } 
+    public string ConfirmPassword { get; set; } 
   }
 }
