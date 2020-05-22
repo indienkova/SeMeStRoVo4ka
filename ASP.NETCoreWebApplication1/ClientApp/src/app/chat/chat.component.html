@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div *ngIf="messages">
+    <div *ngFor="let message of messages">
+      <h4>{{message.owner.firstName}}</h4>
+      <p>{{message.text}}</p>
+    </div>
+  </div>
+  <div>
+    <label>
+      <input type="text" [value]="message">
+    </label>
+    <button class="btn btn-dark" content="Send" (click)="Send()"></button>
+  </div>
+</body>
+</html>
