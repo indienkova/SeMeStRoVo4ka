@@ -1,7 +1,7 @@
-using ASP.NETCoreWebApplication1.Data;
-using ASP.NETCoreWebApplication1.Interfaces;
+using ASP.NETCoreWebApplication1.Core.Models;
+using ASP.NETCoreWebApplication1.Data.Data;
+using ASP.NETCoreWebApplication1.Data.Interfaces;
 using ASP.NETCoreWebApplication1.Middleware;
-using ASP.NETCoreWebApplication1.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

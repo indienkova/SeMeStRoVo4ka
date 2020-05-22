@@ -1,10 +1,10 @@
-﻿using ASP.NETCoreWebApplication1.Models;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ASP.NETCoreWebApplication1.ViewModels;
+using ASP.NETCoreWebApplication1.Core.Models;
+using ASP.NETCoreWebApplication1.Core.ViewModels;
 
 namespace ASP.NETCoreWebApplication1.Controllers
 {

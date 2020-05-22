@@ -1,8 +1,8 @@
-﻿import {Post} from "./post";
+﻿import {post} from "./post";
 import {User} from "./User";
 
 export interface Category {
   name:string;
-  posts:Post[];
+  posts:post[];
   user:User;
 }

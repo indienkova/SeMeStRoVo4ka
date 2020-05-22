@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using ASP.NETCoreWebApplication1.Interfaces;
-using ASP.NETCoreWebApplication1.Models;
-using ASP.NETCoreWebApplication1.ViewModels;
-using Microsoft.AspNetCore.Identity;
+using ASP.NETCoreWebApplication1.Core.Models;
+using ASP.NETCoreWebApplication1.Core.ViewModels;
+using ASP.NETCoreWebApplication1.Data.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ASP.NETCoreWebApplication1.Controllers

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ASP.NETCoreWebApplication1.Models
+namespace ASP.NETCoreWebApplication1.Core.Models
 {
     public class Log
     {

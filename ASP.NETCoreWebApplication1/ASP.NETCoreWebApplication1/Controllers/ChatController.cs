@@ -1,8 +1,9 @@
 ﻿using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using ASP.NETCoreWebApplication1.Core.Models;
 using ASP.NETCoreWebApplication1.Data;
-using ASP.NETCoreWebApplication1.Models;
+using ASP.NETCoreWebApplication1.Data.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace ASP.NETCoreWebApplication1.ViewModels
+namespace ASP.NETCoreWebApplication1.Core.ViewModels
 {
   // Required for model binding to controller's action method from view 
   public class RegisterViewModel

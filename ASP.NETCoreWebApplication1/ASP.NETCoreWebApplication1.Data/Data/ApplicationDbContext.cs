@@ -1,10 +1,10 @@
-﻿using ASP.NETCoreWebApplication1.Models;
+﻿using ASP.NETCoreWebApplication1.Core.Models;
 using IdentityServer4.EntityFramework.Options;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace ASP.NETCoreWebApplication1.Data
+namespace ASP.NETCoreWebApplication1.Data.Data
 {
     public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>
     {

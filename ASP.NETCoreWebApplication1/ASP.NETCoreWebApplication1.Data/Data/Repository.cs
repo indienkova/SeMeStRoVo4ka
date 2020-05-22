@@ -1,11 +1,9 @@
-﻿using ASP.NETCoreWebApplication1.Interfaces;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ASP.NETCoreWebApplication1.Data.Interfaces;
 
-namespace ASP.NETCoreWebApplication1.Data
+namespace ASP.NETCoreWebApplication1.Data.Data
 {
     public class Repository<TEntity, TContext> : IRepository<TEntity> 
         where TEntity : class

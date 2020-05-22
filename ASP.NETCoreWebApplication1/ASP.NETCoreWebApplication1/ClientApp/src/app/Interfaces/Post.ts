@@ -1,6 +1,6 @@
 ﻿import { User } from "./User";
 
-export interface Post {
+export interface post {
   title:string;
   body:string;
   rating:number;

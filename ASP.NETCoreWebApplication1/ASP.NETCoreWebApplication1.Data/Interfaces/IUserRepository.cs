@@ -1,10 +1,6 @@
-﻿using ASP.NETCoreWebApplication1.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ASP.NETCoreWebApplication1.Core.Models;
 
-namespace ASP.NETCoreWebApplication1.Interfaces
+namespace ASP.NETCoreWebApplication1.Data.Interfaces
 {
     public interface IUserRepository : IRepository<ApplicationUser>
     {

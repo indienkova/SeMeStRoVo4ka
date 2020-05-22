@@ -1,6 +1,4 @@
-﻿import { Post } from "./post";
-
-export interface User {
+﻿export interface User {
   firstName:string;
   lastName:string;
   birthDate:Date;

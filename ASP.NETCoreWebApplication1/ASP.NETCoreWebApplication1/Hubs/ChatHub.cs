@@ -1,11 +1,6 @@
-﻿using ASP.NETCoreWebApplication1.Data;
-using ASP.NETCoreWebApplication1.Interfaces;
-using ASP.NETCoreWebApplication1.Models;
-using Microsoft.AspNetCore.SignalR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
+using ASP.NETCoreWebApplication1.Core.Models;
 
 namespace ASP.NETCoreWebApplication1.Hubs
 {

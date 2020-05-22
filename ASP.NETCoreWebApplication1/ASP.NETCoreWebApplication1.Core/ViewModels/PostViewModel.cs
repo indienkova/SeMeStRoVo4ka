@@ -1,7 +1,6 @@
-using System.Collections.Generic;
-using ASP.NETCoreWebApplication1.Models;
+using ASP.NETCoreWebApplication1.Core.Models;
 
-namespace ASP.NETCoreWebApplication1.ViewModels
+namespace ASP.NETCoreWebApplication1.Core.ViewModels
 {
   public class PostViewModel
   {

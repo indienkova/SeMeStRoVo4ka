@@ -1,12 +1,10 @@
+
 ﻿using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
-using ASP.NETCoreWebApplication1.Data;
-using ASP.NETCoreWebApplication1.Interfaces;
-using ASP.NETCoreWebApplication1.Models;
-using ASP.NETCoreWebApplication1.ViewModels;
-using Microsoft.AspNetCore.Authorization;
+using ASP.NETCoreWebApplication1.Core.Models;
+using ASP.NETCoreWebApplication1.Core.ViewModels;
+using ASP.NETCoreWebApplication1.Data.Data;
+using ASP.NETCoreWebApplication1.Data.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,16 +15,12 @@ namespace ASP.NETCoreWebApplication1.Controllers
     public class PostController : Controller
     {
         private readonly IPostRepository _postRepository;
-        private SignInManager<ApplicationUser> _signInManager;
         private readonly IUnitOfWork _unitOfWork;
-        private readonly ApplicationDbContext _context;
-        
-        public PostController(IPostRepository postRepository, IUnitOfWork unitOfWork, SignInManager<ApplicationUser> signInManager, ApplicationDbContext context)
+
+        public PostController(IPostRepository postRepository, IUnitOfWork unitOfWork)
         {
             _postRepository = postRepository;
             _unitOfWork = unitOfWork;
-            _signInManager = signInManager;
-            _context = context;
         }
 
         [HttpGet]
@@ -35,7 +29,7 @@ namespace ASP.NETCoreWebApplication1.Controllers
         {
             return Json(await _postRepository.Get(id));
         }
-
+        
         [HttpGet]
         public IActionResult Get()
         {
@@ -60,29 +54,22 @@ namespace ASP.NETCoreWebApplication1.Controllers
             return Ok();
         }
 
-        [HttpPut("Delete")]
-        public async Task<IActionResult> Delete(Post post)
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
         {
-            var id = post.PostId;
             await _postRepository.Delete(id);
             await _unitOfWork.CompleteAsync();
             return Ok();
         }
         [HttpPut("Upvote")]
         public IActionResult Upvote(Post post)
-        {
-            post.Rating++;
-            _context.Posts.Update(post);
-            _context.SaveChanges();
+        { 
             return Ok();
         }
         
         [HttpPut("downvote")]
         public IActionResult Downvote(Post post)
         {
-            post.Rating--;
-            _context.Posts.Update(post);
-            _context.SaveChanges();
             return Ok();
         }
     }

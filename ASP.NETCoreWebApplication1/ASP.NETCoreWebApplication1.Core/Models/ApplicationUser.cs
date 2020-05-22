@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
 
-namespace ASP.NETCoreWebApplication1.Models
+namespace ASP.NETCoreWebApplication1.Core.Models
 {
     public class ApplicationUser : IdentityUser
     {

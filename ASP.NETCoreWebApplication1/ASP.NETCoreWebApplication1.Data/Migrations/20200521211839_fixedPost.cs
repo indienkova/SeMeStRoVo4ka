@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace ASP.NETCoreWebApplication1.Migrations
+namespace ASP.NETCoreWebApplication1.Data.Migrations
 {
     public partial class fixedPost : Migration
     {

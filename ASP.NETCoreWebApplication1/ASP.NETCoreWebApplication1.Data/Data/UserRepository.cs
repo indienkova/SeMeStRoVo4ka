@@ -1,11 +1,7 @@
-﻿using ASP.NETCoreWebApplication1.Interfaces;
-using ASP.NETCoreWebApplication1.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ASP.NETCoreWebApplication1.Core.Models;
+using ASP.NETCoreWebApplication1.Data.Interfaces;
 
-namespace ASP.NETCoreWebApplication1.Data
+namespace ASP.NETCoreWebApplication1.Data.Data
 {
     public class UserRepository : Repository<ApplicationUser, ApplicationDbContext>, IUserRepository
     {
