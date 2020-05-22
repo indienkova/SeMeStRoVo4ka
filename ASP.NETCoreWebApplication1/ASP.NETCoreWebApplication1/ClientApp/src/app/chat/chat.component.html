@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<div class="jumbotron bg-light">
+  <div class="row">
+    <div class="col-md-12" id="chat" *ngFor="let message of messages">
+      <div class="row">
+        <div *ngIf="message.isMy">
+          <div class="container">
+            <p>{{message.text}}</p>
+            <span class="time-right">11:00</span>
+          </div>
+        </div>
+          <div *ngIf="!message.isMy">
+            <div class="container darker">
+              <p>{{message.text}}</p>
+              <span class="time-right">11:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <label>
+      <input type="text" style="min-width: 200px;min-height: 40px;" [(ngModel)]="message">
+    </label>
+    <button class="btn btn-primary" style="width: auto;height: auto;min-width: 200px;min-height: 40px;margin-bottom: 5px" (click)="Send()">Send</button>
+  </div>
+
+</body>
+</html>
+
+<script src="~/js/signalr/dist/browser/signalr.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/js/signalrReqHandler.js"></script>
+<script src="~/js/chat.js"></script>

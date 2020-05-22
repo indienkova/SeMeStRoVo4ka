@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+<form method="post">
+  <h2 class="text-center">Create New Post</h2>
+  <div class="form-group">
+    <label>
+      <textarea class="form-control" name="message" placeholder="Message" rows="14" [(ngModel)]="text"></textarea>
+    </label>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-danger active" type="submit" style="filter: brightness(169%);" (click)="Send()" [routerLink]="['']">send</button>
+  </div>
+</form>
+</body>
+</html>

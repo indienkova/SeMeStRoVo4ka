@@ -1,1 +1,1 @@
-SeMeStRoVo4ka
+# AngularNeSemestrovka
