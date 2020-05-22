@@ -25,4 +25,7 @@ export class PostComponent{
 
     this.http.put(this.baseUrl + 'api/post/downvote',this.post).subscribe(res=>{this.post.rating--;},error => {console.error(error)});
   }
+  public Delete(){
+    this.http.put(this.baseUrl+'api/post/delete',this.post).subscribe(res=> {},error => {console.error(error)});
+  }
 }

@@ -60,22 +60,29 @@ namespace ASP.NETCoreWebApplication1.Controllers
             return Ok();
         }
 
-        [HttpDelete]
-        public async Task<IActionResult> Delete(int id)
+        [HttpPut("Delete")]
+        public async Task<IActionResult> Delete(Post post)
         {
+            var id = post.PostId;
             await _postRepository.Delete(id);
             await _unitOfWork.CompleteAsync();
             return Ok();
         }
         [HttpPut("Upvote")]
         public IActionResult Upvote(Post post)
-        { 
+        {
+            post.Rating++;
+            _context.Posts.Update(post);
+            _context.SaveChanges();
             return Ok();
         }
         
         [HttpPut("downvote")]
         public IActionResult Downvote(Post post)
         {
+            post.Rating--;
+            _context.Posts.Update(post);
+            _context.SaveChanges();
             return Ok();
         }
     }
